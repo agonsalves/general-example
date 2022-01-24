@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Mako</title>
+    <link rel="shortcut icon" href="%REACT_APP_CDN_LOCATION%favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://use.typekit.net/ewc7upu.css">
+    <style type="text/css">
+        html, body, div, span, applet, object, iframe,
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+        a, abbr, acronym, address, big, cite, code,
+        del, dfn, em, img, ins, kbd, q, s, samp,
+        small, strike, strong, sub, sup, tt, var,
+        b, u, i, center,
+        dl, dt, dd, ol, ul, li,
+        fieldset, form, label, legend,
+        table, caption, tbody, tfoot, thead, tr, th, td,
+        article, aside, canvas, details, embed,
+        figure, figcaption, footer, header, hgroup,
+        menu, nav, output, ruby, section, summary,
+        time, mark, audio, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font: inherit;
+            vertical-align: baseline;
+        }
+
+        body {
+            font-family: acumin-pro, sans-serif;
+            overflow-x: hidden !important;
+        }
+    </style>
+</head>
+<body>
+<noscript>
+    You need to enable JavaScript to run this app.
+</noscript>
+<div id="root"></div>
+<script>
+    // When prerender.io accesses the page, disable the CSS-in-JS optimizations imparted by styled-components.
+    // We need the styles to be part of the DOM for prerender.io to properly render the page for its cache.
+    if (navigator.userAgent.indexOf('prerender') !== -1) {
+        window.SC_DISABLE_SPEEDY = true
+    }
+</script>
+</body>
+</html>
